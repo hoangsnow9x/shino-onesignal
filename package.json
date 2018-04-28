@@ -1,0 +1,30 @@
+{
+  "name": "shino-onesignal",
+  "version": "0.0.1",
+  "description": "Send notification by onesignal",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangsnow9x/shino-onesignal.git"
+  },
+  "keywords": [
+    "notify",
+    "notification",
+    "onesignal",
+    "onesignal sdk",
+    "node onesignal"
+  ],
+  "author": "lehoangnd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoangsnow9x/shino-onesignal/issues"
+  },
+  "homepage": "https://github.com/hoangsnow9x/shino-onesignal.git",
+  "dependencies": {
+    "joi": "^13.2.0",
+    "superagent": "^3.8.2"
+  }
+}
