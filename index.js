@@ -41,6 +41,7 @@ class Shino {
 
     // send to player id
     toIds(contents, ids){
+        this.checkMessage(contents)
         var message = { 
             app_id              : this.appid,
             contents            : contents.body,
@@ -49,6 +50,7 @@ class Shino {
             url                 : contents.url,
             include_player_ids  : ids,
         };
+
         
         this.toOnesignal(message)
           
@@ -56,6 +58,7 @@ class Shino {
 
     // Send to all subscribers
     toAll (contents) {
+        this.checkMessage(contents)
         var message = { 
             app_id              : this.appid,
             contents            : contents.body,
@@ -70,6 +73,7 @@ class Shino {
 
     // send to tag name
     toTags(contents, tags){
+        this.checkMessage(contents)
         var message = { 
             app_id              : this.appid,
             contents            : contents.body,
@@ -215,6 +219,22 @@ class Shino {
             }
       
         });
+    }
+
+    // check message
+    checkMessage(contents){
+        if (typeof contents.head == "string") {
+            contents.head = {
+              en: contents.head
+            }
+        }
+      
+        if (typeof contents.body == "string") {
+            contents.body = {
+                en: contents.body
+            }
+        }
+        return contents
     }
 
     // make a request to onesignal

@@ -35,12 +35,8 @@ var id   = "YOUR_PLAYER_ID",
         value: 1
     },
     contents  = {
-        body: {
-            en: "Message from Hoang Master"
-        },
-        head: {
-            en: "Hello everyone"
-        },
+        body: "Message from Hoang Master",
+        head: "Hello everyone",
         data: {
             notification_type: 1
         },
